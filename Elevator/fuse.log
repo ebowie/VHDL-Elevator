@@ -1,0 +1,21 @@
+Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/Eric/Google Drive/ElevatorHLSM/Elevator/Elevator_isim_beh.exe -prj C:/Users/Eric/Google Drive/ElevatorHLSM/Elevator/Elevator_beh.prj work.Elevator 
+ISim P.28xd (signature 0x1048c146)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Eric/Google Drive/ElevatorHLSM/Elevator/Elevator.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 105504 KB
+Fuse CPU Usage: 342 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity elevator
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 5 VHDL Units
+Built simulation executable C:/Users/Eric/Google Drive/ElevatorHLSM/Elevator/Elevator_isim_beh.exe
+Fuse Memory Usage: 120528 KB
+Fuse CPU Usage: 468 ms

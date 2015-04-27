@@ -1,0 +1,1113 @@
+Release 14.2 - xst P.28xd (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: Elevator.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Elevator.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Elevator"
+Output Format                      : NGC
+Target Device                      : xc6slx16-2-csg324
+
+---- Source Options
+Top Module Name                    : Elevator
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" into library work
+Parsing entity <Elevator>.
+Parsing architecture <Behavioral> of entity <elevator>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Elevator> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 95: current_floor should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 104: current_floor should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 105: changedir should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 115: current_floor should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 116: changedir should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 138: current_floor should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 145: current_floor should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 147: changedir should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 157: current_floor should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 159: changedir should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 178: changedir should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 179: up_list should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 181: up_list should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 183: up_list should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 188: changedir should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 189: down_list should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 191: down_list should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 193: down_list should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 200: up_list should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 201: current_floor should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 202: current_floor should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 208: changedir should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 209: current_floor should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 212: current_floor should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 238: changedir should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 250: up_list should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 258: down_list should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 286: changedir should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 287: current_floor should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 290: current_floor should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 298: changedir should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 299: up_list should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 305: doorstart should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 320: down_list should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 325: doorstart should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 344: doorfinish should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 350: current_floor should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 353: changedir should be on the sensitivity list of the process
+WARNING:HDLCompiler:1127 - "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd" Line 222: Assignment to stopsensor1 ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Elevator>.
+    Related source file is "C:\Users\Eric\Google Drive\ElevatorHLSM\Elevator\Elevator.vhd".
+    Found 3-bit register for signal <current_state>.
+    Found 2-bit adder for signal <current_floor[1]_GND_5_o_add_42_OUT> created at line 287.
+    Found 2-bit subtractor for signal <GND_5_o_GND_5_o_sub_44_OUT<1:0>> created at line 290.
+    Found 8x7-bit Read Only RAM for signal <_n0410>
+    Found 1-bit 4-to-1 multiplexer for signal <current_floor[1]_up_list[3]_Mux_45_o> created at line 299.
+    Found 1-bit 4-to-1 multiplexer for signal <current_floor[1]_down_list[3]_Mux_48_o> created at line 320.
+    Found 1-bit 6-to-1 multiplexer for signal <current_state[2]_X_5_o_Mux_75_o> created at line 230.
+    Found 1-bit 6-to-1 multiplexer for signal <current_state[2]_X_5_o_Mux_77_o> created at line 230.
+WARNING:Xst:737 - Found 1-bit latch for signal <up_list<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <up_list<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <up_list<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <up_list<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <down_list<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <down_list<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <down_list<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <down_list<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <top<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <top<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <motor>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <emptyList>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <next_state<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <next_state<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <next_state<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <changeDir>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <up>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <down>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <clr>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <requestFloor>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <current_floor<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <current_floor<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <doorStart>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <dooropen>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <doorclose>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4-bit comparator greater for signal <GND_5_o_up_list[3]_LessThan_37_o> created at line 250
+    Found 4-bit comparator greater for signal <GND_5_o_down_list[3]_LessThan_38_o> created at line 258
+    Found 2-bit comparator equal for signal <current_floor[1]_top[1]_equal_53_o> created at line 350
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 D-type flip-flop(s).
+	inferred  25 Latch(s).
+	inferred   3 Comparator(s).
+	inferred 164 Multiplexer(s).
+Unit <Elevator> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x7-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 1
+ 2-bit addsub                                          : 1
+# Registers                                            : 1
+ 3-bit register                                        : 1
+# Latches                                              : 25
+ 1-bit latch                                           : 25
+# Comparators                                          : 3
+ 2-bit comparator equal                                : 1
+ 4-bit comparator greater                              : 2
+# Multiplexers                                         : 164
+ 1-bit 2-to-1 multiplexer                              : 159
+ 1-bit 4-to-1 multiplexer                              : 2
+ 1-bit 6-to-1 multiplexer                              : 2
+ 2-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Elevator>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0410> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 7-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <current_state> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <Elevator> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x7-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 1
+ 2-bit addsub                                          : 1
+# Registers                                            : 3
+ Flip-Flops                                            : 3
+# Comparators                                          : 3
+ 2-bit comparator equal                                : 1
+ 4-bit comparator greater                              : 2
+# Multiplexers                                         : 164
+ 1-bit 2-to-1 multiplexer                              : 159
+ 1-bit 4-to-1 multiplexer                              : 2
+ 1-bit 6-to-1 multiplexer                              : 2
+ 2-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Elevator> ...
+WARNING:Xst:1293 - FF/Latch <up_list_0> has a constant value of 0 in block <Elevator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <down_list_3> has a constant value of 0 in block <Elevator>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Elevator, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 3
+ Flip-Flops                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Elevator.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 78
+#      INV                         : 1
+#      LUT2                        : 7
+#      LUT3                        : 16
+#      LUT4                        : 9
+#      LUT5                        : 14
+#      LUT6                        : 30
+#      MUXF7                       : 1
+# FlipFlops/Latches                : 26
+#      FDC                         : 3
+#      LD                          : 23
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 20
+#      IBUF                        : 14
+#      OBUF                        : 6
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              20  out of  18224     0%  
+ Number of Slice LUTs:                   77  out of   9112     0%  
+    Number used as Logic:                77  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     79
+   Number with an unused Flip Flop:      59  out of     79    74%  
+   Number with an unused LUT:             2  out of     79     2%  
+   Number of fully used LUT-FF pairs:    18  out of     79    22%  
+   Number of unique control sets:        18
+
+IO Utilization: 
+ Number of IOs:                          21
+ Number of bonded IOBs:                  21  out of    232     9%  
+    IOB Flip Flops/Latches:               6
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------------------------------+-------------------------+-------+
+Clock Signal                                                                             | Clock buffer(FF name)   | Load  |
+-----------------------------------------------------------------------------------------+-------------------------+-------+
+current_state[2]_PWR_16_o_Mux_86_o(current_state[2]_PWR_16_o_Mux_86_o2:O)                | NONE(*)(clr)            | 1     |
+current_state[2]_PWR_13_o_Mux_80_o(current_state[2]_PWR_13_o_Mux_80_o1:O)                | NONE(*)(changeDir)      | 1     |
+Mram__n04103(Mram__n041031:O)                                                            | NONE(*)(current_floor_0)| 2     |
+current_state[2]_PWR_20_o_Mux_94_o(Mmux_current_state[2]_PWR_20_o_Mux_94_o11:O)          | NONE(*)(doorStart)      | 1     |
+f1_current_floor[1]_MUX_145_o(Mmux_f1_current_floor[1]_MUX_145_o12:O)                    | NONE(*)(down_list_0)    | 1     |
+d4_d4_MUX_57_o(Mmux_d4_d4_MUX_52_o112:O)                                                 | NONE(*)(up_list_3)      | 1     |
+f2_current_floor[1]_MUX_133_o(Mmux_f2_current_floor[1]_MUX_133_o11:O)                    | NONE(*)(down_list_1)    | 1     |
+f2_f2_MUX_87_o(Mmux_f2_f2_MUX_82_o113:O)                                                 | NONE(*)(up_list_1)      | 1     |
+f3_f3_MUX_72_o(Mmux_f3_f3_MUX_67_o112:O)                                                 | NONE(*)(up_list_2)      | 1     |
+f3_current_floor[1]_MUX_118_o(Mmux_f3_current_floor[1]_MUX_118_o11:O)                    | NONE(*)(down_list_2)    | 1     |
+current_state[2]_PWR_10_o_Mux_74_o(Mmux_current_state[2]_PWR_10_o_Mux_74_o11:O)          | NONE(*)(next_state_1)   | 3     |
+GND_5_o_GND_5_o_OR_54_o(GND_5_o_GND_5_o_OR_54_o:O)                                       | NONE(*)(top_1)          | 2     |
+clk1                                                                                     | BUFGP                   | 3     |
+current_state[1]_current_floor[1]_Mux_88_o(current_state[1]_current_floor[1]_Mux_88_o1:O)| NONE(*)(requestFloor)   | 1     |
+current_state[2]_PWR_14_o_Mux_82_o(Mmux_current_state[2]_PWR_14_o_Mux_82_o11:O)          | NONE(*)(down)           | 2     |
+current_state[2]_PWR_9_o_Mux_72_o(Mmux_current_state[2]_PWR_9_o_Mux_72_o13:O)            | NONE(*)(emptyList)      | 1     |
+current_state[2]_PWR_8_o_Mux_70_o(Mmux_current_state[2]_PWR_8_o_Mux_70_o11:O)            | NONE(*)(motor)          | 1     |
+current_state[2]_PWR_21_o_Mux_96_o(Mmux_current_state[2]_PWR_20_o_Mux_94_o111:O)         | NONE(*)(dooropen)       | 2     |
+-----------------------------------------------------------------------------------------+-------------------------+-------+
+(*) These 17 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 3.318ns (Maximum Frequency: 301.386MHz)
+   Minimum input arrival time before clock: 4.462ns
+   Maximum output required time after clock: 4.174ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'current_state[2]_PWR_13_o_Mux_80_o'
+  Clock period: 2.424ns (frequency: 412.460MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.424ns (Levels of Logic = 1)
+  Source:            changeDir (LATCH)
+  Destination:       changeDir (LATCH)
+  Source Clock:      current_state[2]_PWR_13_o_Mux_80_o falling
+  Destination Clock: current_state[2]_PWR_13_o_Mux_80_o falling
+
+  Data Path: changeDir to changeDir
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              34   0.581   1.553  changeDir (changeDir)
+     LUT6:I5->O            1   0.254   0.000  Mmux_current_state[2]_X_5_o_Mux_79_o11 (current_state[2]_X_5_o_Mux_79_o)
+     LD:D                      0.036          changeDir
+    ----------------------------------------
+    Total                      2.424ns (0.871ns logic, 1.553ns route)
+                                       (35.9% logic, 64.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Mram__n04103'
+  Clock period: 2.955ns (frequency: 338.409MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               2.955ns (Levels of Logic = 1)
+  Source:            current_floor_0 (LATCH)
+  Destination:       current_floor_0 (LATCH)
+  Source Clock:      Mram__n04103 falling
+  Destination Clock: Mram__n04103 falling
+
+  Data Path: current_floor_0 to current_floor_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              25   0.581   1.402  current_floor_0 (current_floor_0)
+     INV:I->O              1   0.255   0.681  Maddsub_GND_5_o_current_floor[1]_mux_44_OUT_xor<0>11_INV_0 (GND_5_o_current_floor[1]_mux_44_OUT<0>)
+     LD:D                      0.036          current_floor_0
+    ----------------------------------------
+    Total                      2.955ns (0.872ns logic, 2.083ns route)
+                                       (29.5% logic, 70.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'f1_current_floor[1]_MUX_145_o'
+  Clock period: 3.040ns (frequency: 328.947MHz)
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Delay:               3.040ns (Levels of Logic = 2)
+  Source:            down_list_0 (LATCH)
+  Destination:       down_list_0 (LATCH)
+  Source Clock:      f1_current_floor[1]_MUX_145_o falling
+  Destination Clock: f1_current_floor[1]_MUX_145_o falling
+
+  Data Path: down_list_0 to down_list_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               6   0.581   0.876  down_list_0 (down_list_0)
+     LUT5:I4->O           11   0.254   1.039  Mmux_current_floor[1]_down_list[3]_Mux_48_o11 (current_floor[1]_down_list[3]_Mux_48_o)
+     LUT6:I5->O            1   0.254   0.000  Mmux_down_list[3]_down_list[3]_MUX_141_o14 (down_list[3]_down_list[3]_MUX_141_o)
+     LD:D                      0.036          down_list_0
+    ----------------------------------------
+    Total                      3.040ns (1.125ns logic, 1.915ns route)
+                                       (37.0% logic, 63.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'd4_d4_MUX_57_o'
+  Clock period: 3.318ns (frequency: 301.386MHz)
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Delay:               3.318ns (Levels of Logic = 2)
+  Source:            up_list_3 (LATCH)
+  Destination:       up_list_3 (LATCH)
+  Source Clock:      d4_d4_MUX_57_o falling
+  Destination Clock: d4_d4_MUX_57_o falling
+
+  Data Path: up_list_3 to up_list_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               9   0.581   1.204  up_list_3 (up_list_3)
+     LUT5:I2->O           10   0.235   1.008  Mmux_current_floor[1]_down_list[3]_Mux_48_o111 (current_floor[1]_up_list[3]_Mux_45_o)
+     LUT6:I5->O            1   0.254   0.000  Mmux_up_list[3]_up_list[3]_MUX_53_o13 (up_list[3]_up_list[3]_MUX_53_o)
+     LD:D                      0.036          up_list_3
+    ----------------------------------------
+    Total                      3.318ns (1.106ns logic, 2.212ns route)
+                                       (33.3% logic, 66.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'f2_current_floor[1]_MUX_133_o'
+  Clock period: 1.711ns (frequency: 584.454MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.711ns (Levels of Logic = 1)
+  Source:            down_list_1 (LATCH)
+  Destination:       down_list_1 (LATCH)
+  Source Clock:      f2_current_floor[1]_MUX_133_o falling
+  Destination Clock: f2_current_floor[1]_MUX_133_o falling
+
+  Data Path: down_list_1 to down_list_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               7   0.581   0.909  down_list_1 (down_list_1)
+     MUXF7:S->O            1   0.185   0.000  Mmux_down_list[3]_down_list[3]_MUX_129_o11 (down_list[3]_down_list[3]_MUX_129_o)
+     LD:D                      0.036          down_list_1
+    ----------------------------------------
+    Total                      1.711ns (0.802ns logic, 0.909ns route)
+                                       (46.9% logic, 53.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'f2_f2_MUX_87_o'
+  Clock period: 3.109ns (frequency: 321.647MHz)
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Delay:               3.109ns (Levels of Logic = 2)
+  Source:            up_list_1 (LATCH)
+  Destination:       up_list_1 (LATCH)
+  Source Clock:      f2_f2_MUX_87_o falling
+  Destination Clock: f2_f2_MUX_87_o falling
+
+  Data Path: up_list_1 to up_list_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               9   0.581   0.976  up_list_1 (up_list_1)
+     LUT5:I4->O           10   0.254   1.008  Mmux_current_floor[1]_down_list[3]_Mux_48_o111 (current_floor[1]_up_list[3]_Mux_45_o)
+     LUT6:I5->O            1   0.254   0.000  Mmux_up_list[3]_up_list[3]_MUX_83_o13 (up_list[3]_up_list[3]_MUX_83_o)
+     LD:D                      0.036          up_list_1
+    ----------------------------------------
+    Total                      3.109ns (1.125ns logic, 1.984ns route)
+                                       (36.2% logic, 63.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'f3_f3_MUX_72_o'
+  Clock period: 3.306ns (frequency: 302.480MHz)
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Delay:               3.306ns (Levels of Logic = 2)
+  Source:            up_list_2 (LATCH)
+  Destination:       up_list_2 (LATCH)
+  Source Clock:      f3_f3_MUX_72_o falling
+  Destination Clock: f3_f3_MUX_72_o falling
+
+  Data Path: up_list_2 to up_list_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              12   0.581   1.177  up_list_2 (up_list_2)
+     LUT5:I3->O           10   0.250   1.008  Mmux_current_floor[1]_down_list[3]_Mux_48_o111 (current_floor[1]_up_list[3]_Mux_45_o)
+     LUT6:I5->O            1   0.254   0.000  Mmux_up_list[3]_up_list[3]_MUX_68_o14 (up_list[3]_up_list[3]_MUX_68_o)
+     LD:D                      0.036          up_list_2
+    ----------------------------------------
+    Total                      3.306ns (1.121ns logic, 2.185ns route)
+                                       (33.9% logic, 66.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'f3_current_floor[1]_MUX_118_o'
+  Clock period: 2.270ns (frequency: 440.529MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.270ns (Levels of Logic = 1)
+  Source:            down_list_2 (LATCH)
+  Destination:       down_list_2 (LATCH)
+  Source Clock:      f3_current_floor[1]_MUX_118_o falling
+  Destination Clock: f3_current_floor[1]_MUX_118_o falling
+
+  Data Path: down_list_2 to down_list_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               8   0.581   1.399  down_list_2 (down_list_2)
+     LUT6:I0->O            1   0.254   0.000  Mmux_down_list[3]_down_list[3]_MUX_114_o1 (down_list[3]_down_list[3]_MUX_114_o)
+     LD:D                      0.036          down_list_2
+    ----------------------------------------
+    Total                      2.270ns (0.871ns logic, 1.399ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'current_state[2]_PWR_10_o_Mux_74_o'
+  Clock period: 1.806ns (frequency: 553.710MHz)
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               1.806ns (Levels of Logic = 1)
+  Source:            next_state_1 (LATCH)
+  Destination:       next_state_1 (LATCH)
+  Source Clock:      current_state[2]_PWR_10_o_Mux_74_o falling
+  Destination Clock: current_state[2]_PWR_10_o_Mux_74_o falling
+
+  Data Path: next_state_1 to next_state_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.581   0.954  next_state_1 (next_state_1)
+     LUT6:I3->O            1   0.235   0.000  Mmux_current_state[2]_X_5_o_Mux_75_o23 (current_state[2]_X_5_o_Mux_75_o)
+     LD:D                      0.036          next_state_1
+    ----------------------------------------
+    Total                      1.806ns (0.852ns logic, 0.954ns route)
+                                       (47.2% logic, 52.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'GND_5_o_GND_5_o_OR_54_o'
+  Clock period: 1.806ns (frequency: 553.710MHz)
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               1.806ns (Levels of Logic = 1)
+  Source:            top_0 (LATCH)
+  Destination:       top_0 (LATCH)
+  Source Clock:      GND_5_o_GND_5_o_OR_54_o falling
+  Destination Clock: GND_5_o_GND_5_o_OR_54_o falling
+
+  Data Path: top_0 to top_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.581   0.954  top_0 (top_0)
+     LUT6:I3->O            1   0.235   0.000  Mmux_top[1]_top[1]_MUX_150_o11 (top[1]_top[1]_MUX_159_o)
+     LD:D                      0.036          top_0
+    ----------------------------------------
+    Total                      1.806ns (0.852ns logic, 0.954ns route)
+                                       (47.2% logic, 52.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'f1_current_floor[1]_MUX_145_o'
+  Total number of paths / destination ports: 3 / 1
+-------------------------------------------------------------------------
+Offset:              4.011ns (Levels of Logic = 3)
+  Source:            f1 (PAD)
+  Destination:       down_list_0 (LATCH)
+  Destination Clock: f1_current_floor[1]_MUX_145_o falling
+
+  Data Path: f1 to down_list_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.328   1.002  f1_IBUF (f1_IBUF)
+     LUT4:I0->O            1   0.254   1.137  Mmux_down_list[3]_down_list[3]_MUX_141_o11 (Mmux_down_list[3]_down_list[3]_MUX_141_o1)
+     LUT6:I0->O            1   0.254   0.000  Mmux_down_list[3]_down_list[3]_MUX_141_o14 (down_list[3]_down_list[3]_MUX_141_o)
+     LD:D                      0.036          down_list_0
+    ----------------------------------------
+    Total                      4.011ns (1.872ns logic, 2.139ns route)
+                                       (46.7% logic, 53.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'd4_d4_MUX_57_o'
+  Total number of paths / destination ports: 3 / 1
+-------------------------------------------------------------------------
+Offset:              4.011ns (Levels of Logic = 3)
+  Source:            f4 (PAD)
+  Destination:       up_list_3 (LATCH)
+  Destination Clock: d4_d4_MUX_57_o falling
+
+  Data Path: f4 to up_list_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.328   1.002  f4_IBUF (f4_IBUF)
+     LUT4:I0->O            1   0.254   1.137  Mmux_up_list[3]_up_list[3]_MUX_53_o11 (Mmux_up_list[3]_up_list[3]_MUX_53_o1)
+     LUT6:I0->O            1   0.254   0.000  Mmux_up_list[3]_up_list[3]_MUX_53_o13 (up_list[3]_up_list[3]_MUX_53_o)
+     LD:D                      0.036          up_list_3
+    ----------------------------------------
+    Total                      4.011ns (1.872ns logic, 2.139ns route)
+                                       (46.7% logic, 53.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'f2_current_floor[1]_MUX_133_o'
+  Total number of paths / destination ports: 3 / 1
+-------------------------------------------------------------------------
+Offset:              4.462ns (Levels of Logic = 4)
+  Source:            d2 (PAD)
+  Destination:       down_list_1 (LATCH)
+  Destination Clock: f2_current_floor[1]_MUX_133_o falling
+
+  Data Path: d2 to down_list_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.328   1.271  d2_IBUF (d2_IBUF)
+     LUT5:I0->O            2   0.254   1.156  Mmux_f2_changeDir_MUX_123_o11 (f2_changeDir_MUX_123_o)
+     LUT5:I0->O            1   0.254   0.000  Mmux_down_list[3]_down_list[3]_MUX_129_o11_F (N39)
+     MUXF7:I0->O           1   0.163   0.000  Mmux_down_list[3]_down_list[3]_MUX_129_o11 (down_list[3]_down_list[3]_MUX_129_o)
+     LD:D                      0.036          down_list_1
+    ----------------------------------------
+    Total                      4.462ns (2.035ns logic, 2.427ns route)
+                                       (45.6% logic, 54.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'f2_f2_MUX_87_o'
+  Total number of paths / destination ports: 5 / 1
+-------------------------------------------------------------------------
+Offset:              4.094ns (Levels of Logic = 3)
+  Source:            u2 (PAD)
+  Destination:       up_list_1 (LATCH)
+  Destination Clock: f2_f2_MUX_87_o falling
+
+  Data Path: u2 to up_list_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   1.328   1.104  u2_IBUF (u2_IBUF)
+     LUT6:I3->O            1   0.235   1.137  Mmux_up_list[3]_up_list[3]_MUX_83_o11 (Mmux_up_list[3]_up_list[3]_MUX_83_o1)
+     LUT6:I0->O            1   0.254   0.000  Mmux_up_list[3]_up_list[3]_MUX_83_o13 (up_list[3]_up_list[3]_MUX_83_o)
+     LD:D                      0.036          up_list_1
+    ----------------------------------------
+    Total                      4.094ns (1.853ns logic, 2.241ns route)
+                                       (45.3% logic, 54.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'f3_f3_MUX_72_o'
+  Total number of paths / destination ports: 5 / 1
+-------------------------------------------------------------------------
+Offset:              4.243ns (Levels of Logic = 3)
+  Source:            u3 (PAD)
+  Destination:       up_list_2 (LATCH)
+  Destination Clock: f3_f3_MUX_72_o falling
+
+  Data Path: u3 to up_list_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.328   1.234  u3_IBUF (u3_IBUF)
+     LUT6:I1->O            1   0.254   1.137  Mmux_up_list[3]_up_list[3]_MUX_68_o12 (Mmux_up_list[3]_up_list[3]_MUX_68_o11)
+     LUT6:I0->O            1   0.254   0.000  Mmux_up_list[3]_up_list[3]_MUX_68_o14 (up_list[3]_up_list[3]_MUX_68_o)
+     LD:D                      0.036          up_list_2
+    ----------------------------------------
+    Total                      4.243ns (1.872ns logic, 2.371ns route)
+                                       (44.1% logic, 55.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'f3_current_floor[1]_MUX_118_o'
+  Total number of paths / destination ports: 3 / 1
+-------------------------------------------------------------------------
+Offset:              3.961ns (Levels of Logic = 3)
+  Source:            d3 (PAD)
+  Destination:       down_list_2 (LATCH)
+  Destination Clock: f3_current_floor[1]_MUX_118_o falling
+
+  Data Path: d3 to down_list_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.328   1.259  d3_IBUF (d3_IBUF)
+     LUT6:I0->O            2   0.254   0.834  Mmux_f3_changeDir_MUX_108_o11 (f3_changeDir_MUX_108_o)
+     LUT6:I4->O            1   0.250   0.000  Mmux_down_list[3]_down_list[3]_MUX_114_o1 (down_list[3]_down_list[3]_MUX_114_o)
+     LD:D                      0.036          down_list_2
+    ----------------------------------------
+    Total                      3.961ns (1.868ns logic, 2.093ns route)
+                                       (47.2% logic, 52.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'current_state[2]_PWR_10_o_Mux_74_o'
+  Total number of paths / destination ports: 4 / 3
+-------------------------------------------------------------------------
+Offset:              4.101ns (Levels of Logic = 3)
+  Source:            stop (PAD)
+  Destination:       next_state_2 (LATCH)
+  Destination Clock: current_state[2]_PWR_10_o_Mux_74_o falling
+
+  Data Path: stop to next_state_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.328   1.271  stop_IBUF (stop_IBUF)
+     LUT5:I0->O            1   0.254   0.958  Mmux_current_state[2]_X_5_o_Mux_73_o11_SW1 (N34)
+     LUT6:I2->O            1   0.254   0.000  Mmux_current_state[2]_X_5_o_Mux_73_o12 (current_state[2]_X_5_o_Mux_73_o)
+     LD:D                      0.036          next_state_2
+    ----------------------------------------
+    Total                      4.101ns (1.872ns logic, 2.229ns route)
+                                       (45.6% logic, 54.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk1'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              2.552ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       current_state_0 (FF)
+  Destination Clock: clk1 rising
+
+  Data Path: reset to current_state_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.328   0.765  reset_IBUF (reset_IBUF)
+     FDC:CLR                   0.459          current_state_0
+    ----------------------------------------
+    Total                      2.552ns (1.787ns logic, 0.765ns route)
+                                       (70.0% logic, 30.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'current_state[2]_PWR_8_o_Mux_70_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.174ns (Levels of Logic = 1)
+  Source:            motor (LATCH)
+  Destination:       motor (PAD)
+  Source Clock:      current_state[2]_PWR_8_o_Mux_70_o falling
+
+  Data Path: motor to motor
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.581   0.681  motor (motor_OBUF)
+     OBUF:I->O                 2.912          motor_OBUF (motor)
+    ----------------------------------------
+    Total                      4.174ns (3.493ns logic, 0.681ns route)
+                                       (83.7% logic, 16.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'current_state[2]_PWR_14_o_Mux_82_o'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              4.174ns (Levels of Logic = 1)
+  Source:            up (LATCH)
+  Destination:       up (PAD)
+  Source Clock:      current_state[2]_PWR_14_o_Mux_82_o falling
+
+  Data Path: up to up
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.581   0.681  up (up_OBUF)
+     OBUF:I->O                 2.912          up_OBUF (up)
+    ----------------------------------------
+    Total                      4.174ns (3.493ns logic, 0.681ns route)
+                                       (83.7% logic, 16.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'current_state[1]_current_floor[1]_Mux_88_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.174ns (Levels of Logic = 1)
+  Source:            requestFloor (LATCH)
+  Destination:       requestFloor (PAD)
+  Source Clock:      current_state[1]_current_floor[1]_Mux_88_o falling
+
+  Data Path: requestFloor to requestFloor
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.581   0.681  requestFloor (requestFloor_OBUF)
+     OBUF:I->O                 2.912          requestFloor_OBUF (requestFloor)
+    ----------------------------------------
+    Total                      4.174ns (3.493ns logic, 0.681ns route)
+                                       (83.7% logic, 16.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'current_state[2]_PWR_21_o_Mux_96_o'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              4.174ns (Levels of Logic = 1)
+  Source:            dooropen (LATCH)
+  Destination:       dooropen (PAD)
+  Source Clock:      current_state[2]_PWR_21_o_Mux_96_o falling
+
+  Data Path: dooropen to dooropen
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.581   0.681  dooropen (dooropen_OBUF)
+     OBUF:I->O                 2.912          dooropen_OBUF (dooropen)
+    ----------------------------------------
+    Total                      4.174ns (3.493ns logic, 0.681ns route)
+                                       (83.7% logic, 16.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock GND_5_o_GND_5_o_OR_54_o
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+GND_5_o_GND_5_o_OR_54_o           |         |         |    1.806|         |
+current_state[2]_PWR_13_o_Mux_80_o|         |         |    2.879|         |
+d4_d4_MUX_57_o                    |         |         |    2.783|         |
+f1_current_floor[1]_MUX_145_o     |         |         |    2.892|         |
+f2_current_floor[1]_MUX_133_o     |         |         |    3.030|         |
+f3_current_floor[1]_MUX_118_o     |         |         |    1.919|         |
+f3_f3_MUX_72_o                    |         |         |    2.980|         |
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Mram__n04103
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+Mram__n04103                      |         |         |    2.955|         |
+current_state[2]_PWR_13_o_Mux_80_o|         |         |    2.424|         |
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk1
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+current_state[2]_PWR_10_o_Mux_74_o|         |    1.380|         |         |
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock current_state[1]_current_floor[1]_Mux_88_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk1           |         |         |    1.940|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock current_state[2]_PWR_10_o_Mux_74_o
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+GND_5_o_GND_5_o_OR_54_o           |         |         |    3.800|         |
+Mram__n04103                      |         |         |    5.351|         |
+clk1                              |         |         |    4.016|         |
+current_state[2]_PWR_10_o_Mux_74_o|         |         |    1.806|         |
+current_state[2]_PWR_13_o_Mux_80_o|         |         |    5.685|         |
+current_state[2]_PWR_20_o_Mux_94_o|         |         |    2.787|         |
+current_state[2]_PWR_9_o_Mux_72_o |         |         |    2.637|         |
+d4_d4_MUX_57_o                    |         |         |    4.929|         |
+f1_current_floor[1]_MUX_145_o     |         |         |    4.615|         |
+f2_current_floor[1]_MUX_133_o     |         |         |    5.627|         |
+f2_f2_MUX_87_o                    |         |         |    5.083|         |
+f3_current_floor[1]_MUX_118_o     |         |         |    5.765|         |
+f3_f3_MUX_72_o                    |         |         |    4.955|         |
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock current_state[2]_PWR_13_o_Mux_80_o
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+clk1                              |         |         |    2.310|         |
+current_state[2]_PWR_13_o_Mux_80_o|         |         |    2.424|         |
+d4_d4_MUX_57_o                    |         |         |    2.302|         |
+f2_f2_MUX_87_o                    |         |         |    2.123|         |
+f3_f3_MUX_72_o                    |         |         |    2.370|         |
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock current_state[2]_PWR_14_o_Mux_82_o
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+current_state[2]_PWR_13_o_Mux_80_o|         |         |    2.700|         |
+d4_d4_MUX_57_o                    |         |         |    2.123|         |
+f2_f2_MUX_87_o                    |         |         |    2.056|         |
+f3_f3_MUX_72_o                    |         |         |    2.044|         |
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock current_state[2]_PWR_16_o_Mux_86_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk1           |         |         |    2.404|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock current_state[2]_PWR_20_o_Mux_94_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk1           |         |         |    2.310|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock current_state[2]_PWR_21_o_Mux_96_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk1           |         |         |    2.404|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock current_state[2]_PWR_8_o_Mux_70_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk1           |         |         |    2.310|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock current_state[2]_PWR_9_o_Mux_72_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk1           |         |         |    2.310|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock d4_d4_MUX_57_o
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+Mram__n04103                      |         |         |    4.052|         |
+current_state[2]_PWR_13_o_Mux_80_o|         |         |    2.633|         |
+current_state[2]_PWR_16_o_Mux_86_o|         |         |    3.389|         |
+d4_d4_MUX_57_o                    |         |         |    3.318|         |
+f1_current_floor[1]_MUX_145_o     |         |         |    3.316|         |
+f2_current_floor[1]_MUX_133_o     |         |         |    3.626|         |
+f2_f2_MUX_87_o                    |         |         |    3.109|         |
+f3_current_floor[1]_MUX_118_o     |         |         |    3.814|         |
+f3_f3_MUX_72_o                    |         |         |    3.306|         |
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock f1_current_floor[1]_MUX_145_o
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+Mram__n04103                      |         |         |    4.275|         |
+current_state[2]_PWR_13_o_Mux_80_o|         |         |    2.633|         |
+current_state[2]_PWR_16_o_Mux_86_o|         |         |    3.389|         |
+d4_d4_MUX_57_o                    |         |         |    3.594|         |
+f1_current_floor[1]_MUX_145_o     |         |         |    3.040|         |
+f2_current_floor[1]_MUX_133_o     |         |         |    3.350|         |
+f2_f2_MUX_87_o                    |         |         |    3.385|         |
+f3_current_floor[1]_MUX_118_o     |         |         |    3.538|         |
+f3_f3_MUX_72_o                    |         |         |    3.582|         |
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock f2_current_floor[1]_MUX_133_o
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+Mram__n04103                      |         |         |    3.880|         |
+current_state[2]_PWR_13_o_Mux_80_o|         |         |    4.273|         |
+current_state[2]_PWR_16_o_Mux_86_o|         |         |    2.173|         |
+f2_current_floor[1]_MUX_133_o     |         |         |    1.711|         |
+f2_f2_MUX_87_o                    |         |         |    2.231|         |
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock f2_f2_MUX_87_o
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+Mram__n04103                      |         |         |    4.128|         |
+current_state[2]_PWR_13_o_Mux_80_o|         |         |    4.270|         |
+current_state[2]_PWR_16_o_Mux_86_o|         |         |    3.389|         |
+d4_d4_MUX_57_o                    |         |         |    3.318|         |
+f1_current_floor[1]_MUX_145_o     |         |         |    3.316|         |
+f2_current_floor[1]_MUX_133_o     |         |         |    3.626|         |
+f2_f2_MUX_87_o                    |         |         |    3.109|         |
+f3_current_floor[1]_MUX_118_o     |         |         |    3.814|         |
+f3_f3_MUX_72_o                    |         |         |    3.306|         |
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock f3_current_floor[1]_MUX_118_o
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+Mram__n04103                      |         |         |    3.667|         |
+current_state[2]_PWR_13_o_Mux_80_o|         |         |    3.938|         |
+current_state[2]_PWR_16_o_Mux_86_o|         |         |    1.998|         |
+f3_current_floor[1]_MUX_118_o     |         |         |    2.270|         |
+f3_f3_MUX_72_o                    |         |         |    2.370|         |
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock f3_f3_MUX_72_o
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+Mram__n04103                      |         |         |    5.193|         |
+current_state[2]_PWR_13_o_Mux_80_o|         |         |    5.415|         |
+current_state[2]_PWR_16_o_Mux_86_o|         |         |    3.389|         |
+d4_d4_MUX_57_o                    |         |         |    3.318|         |
+f1_current_floor[1]_MUX_145_o     |         |         |    3.316|         |
+f2_current_floor[1]_MUX_133_o     |         |         |    3.626|         |
+f2_f2_MUX_87_o                    |         |         |    3.109|         |
+f3_current_floor[1]_MUX_118_o     |         |         |    3.814|         |
+f3_f3_MUX_72_o                    |         |         |    3.306|         |
+----------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.05 secs
+ 
+--> 
+
+Total memory usage is 187700 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   66 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

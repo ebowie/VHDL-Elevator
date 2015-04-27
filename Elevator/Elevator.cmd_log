@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "C:/Users/Eric/Google Drive/ElevatorHLSM/Elevator/Elevator.xst" -ofn "C:/Users/Eric/Google Drive/ElevatorHLSM/Elevator/Elevator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-2 "Elevator.ngc" Elevator.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Elevator_map.ncd Elevator.ngd Elevator.pcf 
+par -w -intstyle ise -ol high -mt off Elevator_map.ncd Elevator.ncd Elevator.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml Elevator.twx Elevator.ncd -o Elevator.twr Elevator.pcf 
